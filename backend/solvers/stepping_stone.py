@@ -140,8 +140,8 @@ def solve_stepping_stone(initial_solution: Dict, couts: List[List[float]]) -> Di
                             most_negative_delta = delta
                             best_path_info = (delta, r_nb, c_nb, path_nodes)
 
-        if best_path_info is None or most_negative_delta >= - (EPSILON_SS / 100):
-            if DEBUG_STEPPING_STONE_VERBOSE: print("Solution is optimal or no further significant improvement found.")
+        if best_path_info is None or most_negative_delta >= 0: # Changed - (EPSILON_SS / 100) to 0
+            if DEBUG_STEPPING_STONE_VERBOSE: print("Solution is optimal or no further improvement found.")
             break
 
         _, enter_r, enter_c, best_path_nodes = best_path_info
@@ -210,7 +210,7 @@ def solve_stepping_stone(initial_solution: Dict, couts: List[List[float]]) -> Di
     for r_idx in range(n_rows):
         for c_idx in range(n_cols):
             val = allocation[r_idx][c_idx]
-            if val is not None and val > EPSILON_SS:
+            if val is not None and val > 0: # Changed EPSILON_SS to 0
                 final_cout_total += val * couts[r_idx][c_idx]
 
     if DEBUG_STEPPING_STONE_VERBOSE: print(f"\nStepping Stone finished. Final cost: {final_cout_total:.2f}")
