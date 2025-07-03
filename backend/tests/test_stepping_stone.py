@@ -134,7 +134,7 @@ class TestSteppingStoneSolver(unittest.TestCase):
         for r in range(len(allocation)):
             for c in range(len(allocation[0])):
                 val = allocation[r][c]
-                if val is not None and val > EPSILON_SS:
+                if val is not None and val > 0: # Changed EPSILON_SS to 0
                     total_cost += val * costs[r][c]
         return total_cost
 
