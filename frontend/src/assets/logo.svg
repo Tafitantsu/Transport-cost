@@ -1,0 +1,53 @@
+<svg
+  width="150"
+  height="150"
+  viewBox="0 0 64 64"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Camion stylisé -->
+  <rect x="6" y="30" width="36" height="18" fill="#2C7BE5" rx="3" />
+  <rect x="38" y="34" width="12" height="10" fill="#1B4F72" rx="2" />
+  <circle cx="18" cy="50" r="6" fill="#145DA0" />
+  <circle cx="46" cy="50" r="6" fill="#145DA0" />
+
+  <!-- Roues -->
+  <circle cx="18" cy="50" r="3" fill="#A0C4FF" />
+  <circle cx="46" cy="50" r="3" fill="#A0C4FF" />
+
+  <!-- Symbole calcul (Σ) -->
+  <text
+    x="20"
+    y="26"
+    font-family="Arial, sans-serif"
+    font-weight="bold"
+    font-size="24"
+    fill="#32A852"
+  >
+    Σ
+  </text>
+
+  <!-- Texte "Coût" -->
+  <text
+    x="10"
+    y="15"
+    font-family="Arial, sans-serif"
+    font-weight="bold"
+    font-size="10"
+    fill="#145DA0"
+  >
+    Calcul Coût
+  </text>
+
+  <!-- Texte "Transport" -->
+  <text
+    x="10"
+    y="60"
+    font-family="Arial, sans-serif"
+    font-weight="bold"
+    font-size="10"
+    fill="#145DA0"
+  >
+    Transport
+  </text>
+</svg>

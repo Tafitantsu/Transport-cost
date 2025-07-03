@@ -1,0 +1,106 @@
+/* Container & Header */
+.task-list-container { /* Targets outer Box */
+  max-width: 1000px; /* Adjusted for a typical table layout */
+  margin: 2rem auto;
+  padding: 1rem; /* MUI Box might have its own padding, this is supplemental */
+}
+
+.task-list-header { /* Targets Typography title */
+  font-size: 1.75rem !important; /* Use !important if MUI specificity is high */
+  font-weight: 600 !important;
+  color: #ffffff !important; /* Dark grayish-blue */
+  margin-bottom: 1.5rem !important;
+  text-align: center;
+}
+
+/* Table Container (Paper) */
+/* Targeting the Paper component directly via its MUI class if a custom class isn't on Paper itself */
+.task-list-table-container { /* This class will be on TableContainer, which renders a Paper */
+  background-color: #fff;
+  border-radius: 8px !important; /* Override MUI default if necessary */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  /* padding: 1rem; /* Paper has padding, check if more is needed */
+}
+
+/* Table Styling */
+.task-list-table .MuiTableHead-root .MuiTableCell-root { /* Class on Table + MUI selectors */
+  background-color: #f8f9fa;
+  color: #334155;
+  font-weight: 600;
+  border-bottom: 2px solid #e2e8f0;
+  font-size: 0.95rem; /* Adjust font size for header cells */
+}
+
+.task-list-table .MuiTableBody-root .MuiTableCell-root {
+  padding: 0.8rem 1rem; /* Adjusted padding for body cells */
+  border-bottom: 1px solid #e0e0e0; /* Corrected to #e0e0e0 or similar */
+  color: #475569;
+  font-size: 0.9rem; /* Adjust font size for body cells */
+}
+
+.task-list-table .MuiTableBody-root .MuiTableRow-root:hover {
+  background-color: #f1f5f9 !important; /* Subtle hover for rows */
+}
+
+/* Buttons */
+/* For the "Voir" button in table rows */
+.view-task-button.MuiButton-outlined {
+  border-color: #007bff !important;
+  color: #007bff !important;
+  border-radius: 6px !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  padding: 0.25rem 0.75rem !important; /* Smaller padding for table buttons */
+}
+
+.view-task-button.MuiButton-outlined:hover {
+  background-color: rgba(0,123,255,0.05) !important;
+  border-color: #0056b3 !important;
+}
+
+/* For the "New Project" button */
+.new-project-button.MuiButton-contained { /* Assuming it's a contained button */
+  background-color: #28a745 !important; /* Green, like create button in forms */
+  color: white !important;
+  border-radius: 6px !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  padding: 0.6rem 1.2rem !important;
+  margin-bottom: 1.5rem; /* Space below the button, above table */
+  display: block; /* Or inline-block if preferred */
+  margin-left: auto; /* To push to the right if container is flex/block */
+  margin-right: auto; /* Center if block */
+}
+
+.new-project-button.MuiButton-contained:hover {
+  background-color: #218838 !important; /* Darker green */
+}
+
+/* Empty State Typography */
+.empty-task-list-message { /* If a custom class is added to Typography for "Aucune tâche." */
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d; /* Gray color */
+  font-size: 1.1rem !important;
+}
+
+/* Fix for border color in table body cells */
+.task-list-table .MuiTableBody-root .MuiTableCell-root {
+    border-bottom: 1px solid #e0e0e0; /* Standard light gray border */
+}
+
+/* Ensure container centers correctly and header has breathing room */
+.task-list-container {
+    padding: 2rem; /* More padding for the overall container */
+}
+
+.new-project-button-container { /* Optional: if you wrap the button for layout */
+    display: flex;
+    justify-content: flex-end; /* Aligns button to the right */
+    margin-bottom: 1.5rem;
+}
+
+.new-project-button.MuiButton-contained {
+    margin-left: 0; /* Reset if using container for alignment */
+    margin-right: 0; /* Reset if using container for alignment */
+}

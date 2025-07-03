@@ -1,0 +1,212 @@
+/* Global Container */
+.task-form-container {
+  max-width: 800px; /* Adjusted for a typical form layout */
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.task-form-header {
+  font-size: 1.75rem; /* Slightly reduced from 2xl */
+  font-weight: 600; /* semibold is often 600 */
+  color: #2c3e50; /* Dark grayish-blue */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Replaces space-y-4, adjust as needed */
+}
+
+/* Form Sections/Groups */
+.form-section {
+  margin-bottom: 1rem; /* Default spacing, can be overridden by gap on form */
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+.form-section label { /* General label styling within sections */
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Inputs & Select */
+.task-form input[type='text'],
+.task-form input[type='number'],
+.task-form select {
+  padding: 0.65rem 0.9rem; /* Adjusted padding */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem; /* Slightly smaller font for inputs */
+  box-sizing: border-box;
+  width: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-form input[type='text']:focus,
+.task-form input[type='number']:focus,
+.task-form select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+/* Specific input classes for width variations */
+.input-nom,
+.input-dimension,
+.input-offre-demande,
+.input-cost,
+.input-algo {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #bfc9d1;
+  border-radius: 7px;
+  background: #f5f8fa;
+  font-size: 1rem;
+  color: #000407;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 3px rgba(44, 62, 80, 0.04);
+}
+
+.input-nom:focus,
+.input-dimension:focus,
+.input-offre-demande:focus,
+.input-cost:focus,
+.input-algo:focus {
+  border-color: #007bff;
+  background: #fff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.15);
+  outline: none;
+}
+
+.input-dimension {
+  width: calc(50% - 0.5rem); /* For two side-by-side, considering gap */
+  display: inline-block; /* To sit side-by-side */
+}
+.dimensions-container span {
+    margin: 0 0.5rem;
+}
+
+
+.input-offre-demande {
+  width: 120px; /* Fixed width for these inputs */
+  margin-right: 0.5rem; /* Spacing between them */
+  margin-bottom: 0.5rem; /* Spacing if they wrap */
+  display: inline-block; /* Allow multiple on one line */
+}
+
+/* Section Sub-Headings */
+.section-title {
+  font-size: 1.2rem; /* Adjusted size */
+  font-weight: 600;
+  margin-top: 0.5rem; /* Reduced top margin as it's inside a section */
+  margin-bottom: 1rem; /* Increased bottom margin for spacing before inputs */
+  color: #34495e; /* Slightly different dark blue/gray */
+}
+
+/* Offre/Demande Input Layout */
+.input-list-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow inputs to wrap to next line */
+  gap: 0.5rem; /* Spacing for inputs within the list */
+}
+
+
+/* Sum Display Paragraphs */
+.sum-display {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0.5rem;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  display: inline-block; /* So it doesn't take full width */
+}
+
+/* Validation Message */
+.validation-message-error {
+  color: #d9534f; /* Bootstrap danger red */
+  font-weight: 500; /* Not too bold, but noticeable */
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background-color: #f8d7da; /* Light red background */
+  border: 1px solid #f5c6cb; /* Reddish border */
+  border-radius: 4px;
+}
+
+/* Costs Table */
+.costs-table-container {
+  overflow-x: auto; /* For responsive tables */
+}
+
+.costs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+.costs-table th,
+.costs-table td {
+  border: 1px solid #ddd;
+  padding: 0.6rem; /* Adjusted padding */
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.costs-table th {
+  background-color: #f7f7f7; /* Light gray for table header */
+  font-weight: 600;
+  color: #444;
+}
+
+.costs-table input[type='number'] {
+  width: 100%; /* Fill cell */
+  text-align: center; /* Center align numbers in table */
+  padding: 0.4rem; /* Smaller padding for table inputs */
+  font-size: 0.9rem;
+}
+
+/* Submit Button */
+.submit-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  text-align: center;
+  margin-top: 1rem; /* Space above the button */
+  width: auto; /* Or 100% if preferred */
+  align-self: center; /* Center button if form is flex container */
+}
+
+.submit-button:hover {
+  transform: translateY(-1px); /* Slight lift on hover */
+}
+
+.submit-button.create {
+  background-color: #28a745; /* Bootstrap success green */
+}
+.submit-button.create:hover {
+  background-color: #218838; /* Darker green */
+}
+
+.submit-button.edit {
+  background-color: #ffc107; /* Bootstrap warning yellow */
+  color: #212529; /* Darker text for yellow button */
+}
+.submit-button.edit:hover {
+  background-color: #e0a800; /* Darker yellow */
+}
