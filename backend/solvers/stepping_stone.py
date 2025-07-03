@@ -213,8 +213,9 @@ def solve_stepping_stone(initial_solution: Dict, couts: List[List[float]]) -> Di
             if val is not None and val > 0: # Changed EPSILON_SS to 0
                 final_cout_total += val * couts[r_idx][c_idx]
 
-    if DEBUG_STEPPING_STONE_VERBOSE: print(f"\nStepping Stone finished. Final cost: {final_cout_total:.2f}")
+    rounded_final_cout_total = round(final_cout_total, 2)
+    if DEBUG_STEPPING_STONE_VERBOSE: print(f"\nStepping Stone finished. Final cost: {rounded_final_cout_total:.2f} (original: {final_cout_total})")
     return {
         "allocation": allocation,
-        "cout_total": final_cout_total
+        "cout_total": rounded_final_cout_total
     }
